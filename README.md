@@ -7,7 +7,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -20,7 +20,7 @@ Retrieve all changed files relative to the target branch (`pull_request*` based 
 *   Fast execution (0-2 seconds on average).
 *   Easy to debug.
 *   Boolean output indicating that certain files have been changed.
-*   Git submodules (**TODO**)
+*   Git submodules
 *   Multiple repositories support.
 *   [GitHub-hosted runners](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners) support
 *   [GitHub Enterprise Server](https://docs.github.com/en/enterprise-server@3.3/admin/github-actions/getting-started-with-github-actions-for-your-enterprise/getting-started-with-github-actions-for-github-enterprise-server) support.
@@ -67,7 +67,7 @@ jobs:
 
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v16
+        uses: tj-actions/changed-files@v17
 
       - name: List all changed files
         run: |
@@ -149,11 +149,11 @@ Support this project with a :star:
 
       - name: Get changed files using defaults
         id: changed-files
-        uses: tj-actions/changed-files@v16
+        uses: tj-actions/changed-files@v17
 
       - name: Get changed files using a comma separator
         id: changed-files-comma
-        uses: tj-actions/changed-files@v16
+        uses: tj-actions/changed-files@v17
         with:
           separator: ","
 
@@ -175,7 +175,7 @@ Support this project with a :star:
 
       - name: Get specific changed files
         id: changed-files-specific
-        uses: tj-actions/changed-files@v16
+        uses: tj-actions/changed-files@v17
         with:
           files: |
             my-file.txt
@@ -216,14 +216,14 @@ Support this project with a :star:
 
       - name: Use a source file or list of file(s) to populate to files input.
         id: changed-files-specific-source-file
-        uses: tj-actions/changed-files@v16
+        uses: tj-actions/changed-files@v17
         with:
           files_from_source_file: |
             test/changed-files-list.txt
 
       - name: Use a source file or list of file(s) to populate to files input and optionally specify more files.
         id: changed-files-specific-source-file-and-specify-files
-        uses: tj-actions/changed-files@v16
+        uses: tj-actions/changed-files@v17
         with:
           files_from_source_file: |
             test/changed-files-list.txt
@@ -232,13 +232,13 @@ Support this project with a :star:
 
       - name: Use a different commit SHA
         id: changed-files-custom-sha
-        uses: tj-actions/changed-files@v16
+        uses: tj-actions/changed-files@v17
         with:
           sha: ${{ github.event.pull_request.head.sha }}
 
       - name: Use a different base SHA
         id: changed-files-custom-base-sha
-        uses: tj-actions/changed-files@v16
+        uses: tj-actions/changed-files@v17
         with:
           base_sha: "2096ed0"
           
@@ -250,7 +250,7 @@ Support this project with a :star:
 
       - name: Run changed-files with defaults on the dir1
         id: changed-files-for-dir1
-        uses: tj-actions/changed-files@v16
+        uses: tj-actions/changed-files@v17
         with:
           path: dir1
 
@@ -262,13 +262,13 @@ Support this project with a :star:
 
       - name: Run changed-files using the last commit on the remote branch
         id: changed-files-since-last-remote-commit
-        uses: tj-actions/changed-files@v16
+        uses: tj-actions/changed-files@v17
         with:
           since_last_remote_commit: "true"
       
       - name: Run changed-files using the fork point of a pull request
         id: changed-files-fork-point
-        uses: tj-actions/changed-files@v16
+        uses: tj-actions/changed-files@v17
         with:
           use_fork_point: "true"
 
@@ -335,6 +335,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/wushujames"><img src="https://avatars.githubusercontent.com/u/677529?v=4?s=100" width="100px;" alt=""/><br /><sub><b>James Cheng</b></sub></a><br /><a href="https://github.com/tj-actions/changed-files/commits?author=wushujames" title="Documentation">📖</a></td>
     <td align="center"><a href="https://qiita.com/SUZUKI_Masaya"><img src="https://avatars.githubusercontent.com/u/15100604?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Masaya Suzuki</b></sub></a><br /><a href="https://github.com/tj-actions/changed-files/commits?author=massongit" title="Code">💻</a></td>
     <td align="center"><a href="https://fagai.net"><img src="https://avatars.githubusercontent.com/u/1772112?v=4?s=100" width="100px;" alt=""/><br /><sub><b>fagai</b></sub></a><br /><a href="https://github.com/tj-actions/changed-files/commits?author=fagai" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/pkit"><img src="https://avatars.githubusercontent.com/u/805654?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Constantine Peresypkin</b></sub></a><br /><a href="https://github.com/tj-actions/changed-files/commits?author=pkit" title="Code">💻</a></td>
   </tr>
 </table>
 
